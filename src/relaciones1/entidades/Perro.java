@@ -13,6 +13,11 @@ public class Perro {
         this.tamaño = tamaño;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+    
+    
     @Override
     public String toString() {
         return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", tama\u00f1o=" + tamaño + '}';

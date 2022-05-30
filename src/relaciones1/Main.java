@@ -1,21 +1,25 @@
 package relaciones1;
 
+import java.util.ArrayList;
+import java.util.List;
 import relaciones1.entidades.Perro;
 import relaciones1.entidades.Persona;
+import relaciones1.servicios.ServicioPerrera;
+
 
 public class Main {
 
     public static void main(String[] args) {
-        Persona p1 = new Persona("Sergio", "Ciminari", 23, "41.424.334");
-        Persona p2 = new Persona("Enrique", "Gonzalez", 25, "39.243.443");
+        ArrayList<Perro> perros = new ArrayList();
+        ArrayList<Persona> personas = new ArrayList();
+        ServicioPerrera sp = new ServicioPerrera();
         
-        Perro perro1 = new Perro("Bronco", "Dobermann", 1, "Grande");
-        Perro perro2 = new Perro("Lola", "Caniche", 2, "Chico");
+        sp.añadirPersona(personas);
+        sp.añadirPerro(perros);
         
-        p2.setPerro(perro2);
-        p1.setPerro(perro1);
+        sp.adoptarPerro(perros, personas);
         
-        System.out.println(p1 + "\n" +p2);
+        sp.mostrarPersonas(personas);
     }
     
 }
